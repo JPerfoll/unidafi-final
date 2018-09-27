@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="end">
+      <ion-button (click)="exit()">
+        <ion-icon slot="end" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Teachers List</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content padding>
+  <ion-item *ngFor="let teacher of data?.teachers" (click)="showTeacherDetail(teacher)">
+      <ion-img [src]="teacher.photo_url"></ion-img>
+      <ion-label>{{teacher.last_name}}, <b>{{teacher.name}}</b></ion-label>   
+      <ion-icon slot="end" name="arrow-forward"></ion-icon>   
+  </ion-item>
+</ion-content>

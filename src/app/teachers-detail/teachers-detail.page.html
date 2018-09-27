@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Teacher Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="teacher.photo_url"></ion-img>
+      <ion-card-title>{{teacher.name}} {{teacher.last_name}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{teacher.info}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
